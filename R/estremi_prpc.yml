@@ -1,0 +1,4 @@
+default:
+  max.na: 5
+  max.size.block.na: 5
+  rle.check: TRUE
