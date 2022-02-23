@@ -1,7 +1,7 @@
 ---
-title: Selezione serie precipitazione per estremi
-date:  "`r Sys.Date()`"
-author: Guido Fioravanti
+title: "Selezione serie precipitazione per estremi"
+author: "Guido Fioravanti"
+date: "`r Sys.Date()`"
 ---
 
 ```{r intro,include=TRUE,message=FALSE,echo=FALSE,warning=FALSE,error=FALSE}
@@ -220,7 +220,7 @@ elimina_vicine<-function(p1,tolerance){
 #filtro le stazioni troppo vicine
 elimina_vicine(p1=stazioniNord,tolerance = 25000)->stazioniNordFiltrate
 elimina_vicine(p1=stazioniCentro,tolerance = 25000)->stazioniCentroFiltrate
-elimina_vicine(p1=stazioniSud,tolerance = 1000)->stazioniSudFiltrate
+elimina_vicine(p1=stazioniSud,tolerance = 25000)->stazioniSudFiltrate
 
 #file di output
 write_delim(finale[,c("yy","mm","dd",stazioniNordFiltrate$id)],"prpc_nord_serie_selezionate_per_estremi_rapporto_1991_2020.csv",delim=";",col_names = TRUE)

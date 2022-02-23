@@ -1,0 +1,10 @@
+default:
+  max.na: 10
+  max.size.block.na: 4
+  blocco.anni.na.climatologico: 6
+  max.blocco.anni.na.climatologico: 6
+  fun.climatologico.annuale: !expr purrr::partial(.f=mean,na.rm=FALSE)
+precipitation:
+  max.na: 0
+  max.size.block.na: 0
+  fun.climatologico.annuale: !expr purrr::partial(.f=sum,na.rm=FALSE)

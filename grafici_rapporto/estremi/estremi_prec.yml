@@ -1,0 +1,7 @@
+default:
+  annoI: 1971
+  annoF: 2020
+  climatolI: 1971
+  climatolF: 2000
+  max.missing.days.annual: 15
+  max.missing.days.monthly: 5
